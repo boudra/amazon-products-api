@@ -16,5 +16,8 @@
     "affiliate"
   ],
   "author": "Mohamed Boudra <boudra.moha@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "mocha": "^2.3.4"
+  }
 }
