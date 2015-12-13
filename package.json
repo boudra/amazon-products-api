@@ -1,0 +1,20 @@
+{
+  "name": "amazon-products-api",
+  "version": "1.0.0",
+  "description": "A modern Amazon Products Advertising API client for Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "aws",
+    "ecommerce",
+    "products",
+    "avdvertising products",
+    "api",
+    "amazon",
+    "affiliate"
+  ],
+  "author": "Mohamed Boudra <boudra.moha@gmail.com>",
+  "license": "MIT"
+}
