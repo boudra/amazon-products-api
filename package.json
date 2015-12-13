@@ -18,6 +18,9 @@
   ],
   "author": "Mohamed Boudra <boudra.moha@gmail.com>",
   "license": "MIT",
+  "engines" : {
+      "node" : ">=4.0.0"
+  },
   "dependencies": {
   },
   "devDependencies": {
