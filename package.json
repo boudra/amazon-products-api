@@ -4,7 +4,8 @@
   "description": "A modern Amazon Products Advertising API client for Node.js",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha",
+    "test-dev": "mocha --watch"
   },
   "keywords": [
     "aws",
@@ -18,6 +19,8 @@
   "author": "Mohamed Boudra <boudra.moha@gmail.com>",
   "license": "MIT",
   "dependencies": {
+  },
+  "devDependencies": {
     "mocha": "^2.3.4"
   }
 }
