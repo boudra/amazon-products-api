@@ -7,7 +7,7 @@ describe('signature', function() {
 
         // data taken straight from
         // http://docs.aws.amazon.com/AWSECommerceService/latest/DG/rest-signature.html
-        const params = {
+        var params = {
             Service: 'AWSECommerceService',
             AWSAccessKeyId: 'AKIAIOSFODNN7EXAMPLE',
             AssociateTag: 'mytag-20',
@@ -20,7 +20,7 @@ describe('signature', function() {
 
         assert.equal(
             getSignature(params, '1234567890'),
-            'j7bZM0LXZ9eXeZruTqWm2DIvDYVUU3wxPPpp%2BiXxzQc%3D'
+            'bdecHRIqahEaXWZZ4ig6kbFLC3UNhdLU/UWAXr0XjIk='
         );
 
     });

@@ -1,5 +1,7 @@
 const getSignature = require('./signature');
 const http = require('http');
+const common = require('./common');
+const parseXML = require('xml2js').parseString;
 
 const defaults = {
     Service: 'AWSECommerceService',
@@ -23,14 +25,31 @@ var AmazonProducts = Object.create({
 
             params = params || {};
             params = this.addCommonParams(params);
+            params.Operation = name;
             params.Signature = getSignature(params, this.SecretKey);
 
-            const uri = Object.keys(params).map(function(key) {
-                return encodeURIComponent(key) + '=' +
-                    encodeURIComponent(params[key]);
-            }).join('&');
+            const uri = common.getUri(params);
 
-            console.log(uri);
+            // console.log(common.defaults.host + common.defaults.path + '?' + uri);
+
+            const request = http.get({
+                hostname: common.defaults.host,
+                path: common.defaults.path + '?' + uri,
+                agent: false,
+            }, function(res) {
+                res.setEncoding('utf8');
+                var data = '';
+                res.on('data', function(chunk) {
+                    data += chunk;
+                });
+                res.on('end', function() {
+                    parseXML(data, function(error, result) {
+                        resolve(result);
+                    });
+                })
+            });
+
+            request.on('error', reject);
 
         });
 

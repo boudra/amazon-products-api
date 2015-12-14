@@ -18,10 +18,11 @@
   ],
   "author": "Mohamed Boudra <boudra.moha@gmail.com>",
   "license": "MIT",
-  "engines" : {
-      "node" : ">=4.0.0"
+  "engines": {
+    "node": ">=4.0.0"
   },
   "dependencies": {
+    "xml2js": "^0.4.15"
   },
   "devDependencies": {
     "mocha": "^2.3.4"
