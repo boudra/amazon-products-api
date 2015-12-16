@@ -1,17 +1,17 @@
-[![Build Status](https://travis-ci.org/boudra/node-amazon-products-api.svg?branch=master)](https://travis-ci.org/boudra/node-amazon-products-api)
+[![Build Status](https://travis-ci.org/boudra/amazon-products-api.svg?branch=master)](https://travis-ci.org/boudra/amazon-products-api)
 
 # Installation
 
 Install it in your project using NPM:
 
 ```bash
-npm install --save node-amazon-products-api
+npm install --save amazon-products-api
 ```
 
 # Example
 
 ```js
-const amazonProducts = require('../index')({
+const amazonProducts = require('amazon-products-api')({
     AccessKey: '1337',
     SecretKey: '42',
     Tag: 'whatevs-20'
@@ -21,7 +21,7 @@ amazonProducts.operation('ItemLookup', {
     ItemId: '0679722769',
     ResponseGroup: 'Images,ItemAttributes,Offers,Reviews'
 }).then(function(response) {
-    fs.writeFileSync('result.json', JSON.stringify(response, null, 2));
+    console.log(response);
 }).catch(function(response) {
     // whoops
 });
