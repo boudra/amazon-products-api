@@ -1,6 +1,6 @@
 {
   "name": "amazon-products-api",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A modern Amazon Products Advertising API client for Node.js",
   "main": "index.js",
   "scripts": {
