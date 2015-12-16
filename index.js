@@ -31,7 +31,6 @@ var AmazonProducts = Object.create({
             const uri = common.getUri(params);
 
             // console.log(common.defaults.host + common.defaults.path + '?' + uri);
-
             const request = http.get({
                 hostname: common.defaults.host,
                 path: common.defaults.path + '?' + uri,
