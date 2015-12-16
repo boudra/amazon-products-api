@@ -5,7 +5,12 @@ const parseXML = require('xml2js').parseString;
 
 const defaults = {
     Service: 'AWSECommerceService',
-    Version: '2013-08-01'
+    Version: '2013-08-01',
+    xmlOptions: {
+        explicitArray: false,
+        explicitRoot: false,
+        ignoreAttrs: true
+    }
 };
 
 var AmazonProducts = Object.create({
@@ -30,19 +35,18 @@ var AmazonProducts = Object.create({
 
             const uri = common.getUri(params);
 
-            // console.log(common.defaults.host + common.defaults.path + '?' + uri);
             const request = http.get({
                 hostname: common.defaults.host,
                 path: common.defaults.path + '?' + uri,
                 agent: false,
-            }, function(res) {
+            }, (res) => {
                 res.setEncoding('utf8');
                 var data = '';
-                res.on('data', function(chunk) {
+                res.on('data', (chunk) => {
                     data += chunk;
                 });
-                res.on('end', function() {
-                    parseXML(data, function(error, result) {
+                res.on('end', () => {
+                    parseXML(data, this.xmlOptions, function(error, result) {
                         resolve(result);
                     });
                 })
