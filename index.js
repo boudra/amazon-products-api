@@ -65,7 +65,7 @@ module.exports = function(options) {
     if(!options.SecretKey) throw 'The SecretKey is required';
     if(!options.Tag)       throw 'The Tag is required';
 
-    options = Object.assign(defaults, options);
+    options = Object.assign({}, defaults, options);
 
     return Object.assign(Object.create(AmazonProducts), options);
 };
