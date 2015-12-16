@@ -1,6 +1,14 @@
 language: node_js
 node_js:
-  - "5.1"
-  - "5.0"
-  - "4.1"
-  - "4.0"
+- '5.1'
+- '5.0'
+- '4.1'
+- '4.0'
+deploy:
+  provider: npm
+  email: boudra.moha@gmail.com
+  api_key:
+    secure: VNrv0ykjyvwbP+Zvt4+ms+CMbR8/tmn0h/CNh7zlTjg+jHfGb1mp6vywqMZovviETpx2pcnlm+WpoGRB+/QQQfJDjiBxUiF6FkwuVvcjQO4GHOsqpC849GypCPAUdul91VpUS1Z6//q+iP2PgAb641Y3zLt0ugj1WytUHJe2QfB+Nb2xmu4Hro0LNA0j/ABfwqABAwHdI8k5z+ta+mrwGf1rcmEocLrdELDk1hxkcHTjGQEn3wiB//syEwM1qSn+82bSJtmX3+07I/ZTtWmd4K3w1KWf4eQlg163VY1nGWHcL/dCHU31j5aLK8ZRW/WZwA6ZDMH8rTNBT5JxPv1PjsELci7f5kamALrEH2IG3/20w4kax+c77p33UGjbANiRPcOKI6UdnxfSUAlOAQW0tfzwBjW0z0ad0pPJAOm2bKZKhQm+OUyEr1XOqaCjU9SAq5N5wn6iwkUyT0vM64GKvJhFKOpzxgPlrnvk709MZnWEVvY/uZm1Wk+EdCDNBNF43u0bT0tdO+GK2ZbFgLv42Q++4nFpd9e8moIeEJI/hL+lcZUW40IMc7LArNB3ZS3T8t3hPjJlpFkPfn9ucBIm93nj2VZQg7nNef/DEKYjgm6qh1S7I6E3wOd3Hwe6/coVfNnqLXzNGdU6UyJJ4i+vw/ooeXRRWNAJhkGlEFaDYj4=
+  on:
+    tags: true
+    repo: boudra/amazon-products-api
