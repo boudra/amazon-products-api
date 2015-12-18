@@ -3,6 +3,7 @@
   "version": "0.0.3",
   "description": "A modern Amazon Products Advertising API client for Node.js",
   "main": "index.js",
+  "repository": "boudra/amazon-products-api",
   "scripts": {
     "test": "mocha",
     "test-dev": "mocha --watch"
